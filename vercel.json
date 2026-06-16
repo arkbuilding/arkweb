@@ -1,0 +1,46 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/api/llm-proxy/:scheme/:host/:path*",
+      "destination": "/api/llm-proxy?scheme=:scheme&host=:host&path=:path*"
+    },
+    {
+      "source": "/script/:scriptId",
+      "destination": "/script/[scriptId].html"
+    },
+    {
+      "source": "/story/loading/:copyId",
+      "destination": "/story/loading/[copyId].html"
+    },
+    {
+      "source": "/story/:copyId/forum/:eventId",
+      "destination": "/story/[copyId]/forum/[eventId].html"
+    },
+    {
+      "source": "/story/:copyId/forum",
+      "destination": "/story/[copyId]/forum.html"
+    },
+    {
+      "source": "/story/:copyId/information/:conversationId",
+      "destination": "/story/[copyId]/information/[conversationId].html"
+    },
+    {
+      "source": "/story/:copyId/information",
+      "destination": "/story/[copyId]/information.html"
+    },
+    {
+      "source": "/story/:copyId",
+      "destination": "/story/[copyId].html"
+    },
+    {
+      "source": "/import/parsing/:sessionId",
+      "destination": "/import/parsing/[sessionId].html"
+    },
+    {
+      "source": "/import/configure/:sessionId",
+      "destination": "/import/configure/[sessionId].html"
+    }
+  ]
+}
